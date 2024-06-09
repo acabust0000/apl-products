@@ -1,3 +1,7 @@
 *
 !public/
+!products
+!products/*
+!legal
+!legal/*
 !.gitignore
