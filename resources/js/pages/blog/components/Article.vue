@@ -8,7 +8,7 @@ defineProps({
 })
 </script>
 <template>
-    <article class="flex-responsive sm:gap-responsive items-center">
+    <article class="flex flex-col lg:flex-row lg:gap-responsive items-center">
         <div class="w-full aspect-square ">
             <img :src="article.img" :alt="article.title" width="256" height="256" loading="lazy" class="h-full w-auto object-scale-down rounded-md mx-auto"/>
         </div>

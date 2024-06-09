@@ -66,7 +66,7 @@ const submit    = () => form.post(props.url, {
 </script>
 <template>
     <Layout>
-        <section id="contactCard" class="px-responsive sm:py-responsive gap-responsive items-start flex-responsive border-none shadow-none bg-transparent">
+        <section id="contactCard" class="px-responsive lg:py-responsive gap-responsive items-start flex flex-col lg:flex-row border-none shadow-none bg-transparent">
 
             <div class="w-full flex flex-col gap-responsive-xs">
                 <div>

@@ -31,9 +31,9 @@ onMounted(() => {
 </script>
 <template>
     <Layout>
-        <section id="hero" class="px-responsive sm:gap-responsive flex-responsive-reverse items-center sm:py-0">
-            <div class="w-full aspect-square sm:py-responsive">
-                <img src="/products/all.webp" alt="Apl Products" width="256" height="256" loading="lazy" class="h-full w-auto object-scale-down rounded-md mx-auto sm:scale-150"/>
+        <section id="hero" class="px-responsive sm:gap-responsive flex flex-col-reverse lg:flex-row items-center sm:py-0">
+            <div class="w-full aspect-square lg:py-responsive">
+                <img src="/products/all.webp" alt="Apl Products" width="256" height="256" loading="lazy" class="h-full w-auto object-scale-down rounded-md mx-auto lg:scale-150"/>
             </div>
             <div class="container-text">
                 <div>
