@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Modern Era';
+    src: url('ModernEra-Medium.woff2') format('woff2'),
+        url('ModernEra-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Modern Era';
+    src: url('ModernEra-ExtraBold.woff2') format('woff2'),
+        url('ModernEra-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Modern Era';
+    src: url('ModernEra-Regular.woff2') format('woff2'),
+        url('ModernEra-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

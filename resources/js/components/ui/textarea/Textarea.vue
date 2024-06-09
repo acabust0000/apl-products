@@ -1,0 +1,41 @@
+<script setup>
+import { useTextareaAutosize, useVModel } from "@vueuse/core";
+import { cn } from "@/lib";
+import { watch } from "vue";
+
+const { textarea, input }   = useTextareaAutosize();
+
+const props = defineProps({
+  class: { type: null, required: false },
+  defaultValue: { type: [String, Number], required: false },
+  modelValue: { type: [String, Number], required: false },
+});
+
+const emits = defineEmits(["update:modelValue"]);
+
+const modelValue = useVModel(props, "modelValue", emits, {
+  passive: true,
+  defaultValue: props.defaultValue,
+});
+
+// @todo check this
+watch(input, (input) => modelValue.value = input);
+watch(props.modelValue, (a) => input = a);
+
+defineExpose({
+    input
+})
+</script>
+
+<template>
+  <textarea
+    ref="textarea"
+    v-model="input"
+    :class="
+      cn(
+        'flex min-h-20 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+        props.class,
+      )
+    "
+  />
+</template>
