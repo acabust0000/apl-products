@@ -12,7 +12,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 /**
- * 
+ * @param string $title
  */
 class Article extends Model implements HasMedia
 {

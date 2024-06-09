@@ -10,10 +10,14 @@ use App\Models\Article;
 use App\Models\Faq;
 use App\Models\Gallery;
 use Illuminate\Database\Eloquent\Builder;
+use Inertia\Inertia;
 
 class ViewController extends Controller
 {
     public function index () {
+        $title = config('app.name');
+        Inertia::share('title', "Despre Noi - $title");
+
         $ref    = 'https://ro.aplgo.com/884621/acumullitsa/';
         $props  = [
             'products' => [
@@ -115,6 +119,9 @@ class ViewController extends Controller
     }
 
     public function contact () {
+        $title = config('app.name');
+        Inertia::share('title', "Contact - $title");
+
         $props = [
             'url'   => route('leads.store'),
             'faqs'  => Faq::all(),
@@ -125,6 +132,9 @@ class ViewController extends Controller
 
     public function gallery (ListGalleriesRequest $request) 
     {
+        $title = config('app.name');
+        Inertia::share('title', "Galerie - $title");
+
         $galleries  = Gallery::with('media')
             ->orderBy('date', $request->query('sort', 'desc'))
             ->when(
@@ -151,6 +161,9 @@ class ViewController extends Controller
     }
 
     public function blog (ListBlogRequest $request) {
+        $title = config('app.name');
+        Inertia::share('title', "Blog - $title");
+
         $articles  = Article::with('media')
             ->orderBy('created_at', $request->query('sort', 'desc'))
             ->when(

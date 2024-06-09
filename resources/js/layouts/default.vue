@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { onMounted } from 'vue';
+import { Head } from '@inertiajs/vue3';
 
 defineProps({
     class: String
@@ -37,9 +38,10 @@ onMounted(() => {
             }
         )
 })
-
 </script>
 <template>
+    <Head :title="$page.props.title" />
+
     <teleport to="body">
         <Toaster position="top-right" richColors duration="5000"/>
     </teleport>
