@@ -3,5 +3,5 @@
 use Spatie\Sitemap\SitemapGenerator;
 
 Schedule::call(function () {
-    SitemapGenerator::create(config('app.url'))->getSitemap()->writeToDisk('public', 'sitemap.xml');
+    SitemapGenerator::create('https://apl-products.com')->getSitemap()->writeToDisk('public', 'sitemap.xml');
 })->daily();
