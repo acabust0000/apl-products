@@ -27,8 +27,8 @@ defineProps({
         </div>
         <p class="z-10 lg:max-w-7xl" v-text="'Alăturați-vă familiei noastre și împărtășiți mesajul sănătății și bunăstării cu o comunitate dedicată. Suntem încântați să colaborăm cu persoane și organizații care împărtășesc valorile noastre. Prin parteneriatul cu noi, nu doar că vă veți promova produsele, dar veți deveni parte dintr-o rețea de oameni pasionați de îmbunătățirea stilului de viață. Indiferent dacă sunteți un brand nou sau bine cunoscut, ne dorim să lucrăm împreună pentru a crea inițiative care să inspire și să motiveze. Contactați-ne pentru a discuta cum putem colabora și crește împreună.'" />
         <div class="z-10 flex gap-responsive-xs">
-            <Button variant="outline" size="lg">
-                <Link :href="$page.props.links.apl" v-text="'Viziteaza magazin'" />
+            <Button variant="outline" size="lg" asChild >
+                <a :href="$page.props.links.apl" target="_blank" v-text="'Viziteaza magazin'" />
             </Button>
             <Button variant="outline" size="lg">
                 <Link :href="route('views.contact')" v-text="'Contact'" />
