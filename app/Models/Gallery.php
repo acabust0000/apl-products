@@ -40,6 +40,7 @@ class Gallery extends Model implements HasMedia
             ->optimize()
             ->fit(Fit::Max, 1920,  1080)
             ->format('webp')
+            ->nonQueued()
         ;
     }
     
