@@ -23,7 +23,7 @@
         @vite(['resources/js/app.js'])
         @inertiaHead
     </head>
-    <body class="antialiased flex flex-col overflow-hidden h-screen">
+    <body class="antialiased flex flex-col h-screen">
         @inertia
     </body>
 </html>
