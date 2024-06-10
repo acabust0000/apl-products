@@ -49,7 +49,7 @@ onMounted(() => {
                 </p>
                 <div class="flex flex-wrap sm:flex-nowrap gap-responsive-xs pt-4">
                     <Button size="lg" asChild >
-                        <a :href="$page.props.apl" target="_blank" class="w-full sm:w-auto">
+                        <a :href="$page.props.links.apl" target="_blank" class="w-full sm:w-auto">
                             Magazin APL
                         </a>
                     </Button>
